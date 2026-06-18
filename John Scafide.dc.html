@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{margin:0}
+  a{color:inherit;text-decoration:none}
+  :root{--bg:#EDF0EA;--ink:#15110D;--accent:#2E4A3A;--line:rgba(21,17,13,.12)}
+  ::selection{background:var(--accent);color:#fff}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="min-height:100vh;background:var(--bg);color:var(--ink);font-family:'Hanken Grotesk',sans-serif;font-size:16px;line-height:1.5;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)">
+    <div style="max-width:1180px;margin:0 auto;padding:14px clamp(20px,5vw,56px);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <a href="#top" style="font-family:'Hanken Grotesk',sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase">John Scafide</a>
+      <nav style="display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap">
+        <a href="#real-estate" style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase">Real Estate</a>
+        <a href="#sold" style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase">Sold</a>
+        <a href="#taxes" style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase">Taxes</a>
+        <a href="#relief" style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase">Relief</a>
+        <a href="#contact" style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,56px)">
+
+    <section data-sect style="padding:clamp(56px,9vw,128px) 0 clamp(48px,7vw,96px);display:flex;gap:clamp(28px,5vw,72px);flex-wrap:wrap;align-items:flex-end">
+      <div style="flex:3 1 360px;min-width:300px">
+        <p data-r style="font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:clamp(20px,3vw,34px)">Turnersville, New Jersey</p>
+        <h1 data-r style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(58px,13vw,156px);line-height:.9;letter-spacing:-.025em">John<br><em style="font-style:italic;font-weight:300">Scafide</em></h1>
+        <p data-r style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(22px,3.1vw,34px);line-height:1.28;max-width:20ch;margin-top:clamp(26px,4vw,44px)">I sell houses and I prepare taxes. Two things people dread. Neither has to be.</p>
+        <p data-r style="font-size:clamp(15px,1.6vw,18px);line-height:1.6;max-width:46ch;margin-top:22px;color:rgba(21,17,13,.66)">Real estate with the Chris McKenty Team at Opus Elite. Tax prep and New Jersey relief programs on the side.</p>
+      </div>
+      <div data-r style="flex:1 1 240px;min-width:220px;width:100%">
+        <img src="john-scafide.jpg" alt="John Scafide" style="aspect-ratio:4 / 5;width:100%;object-fit:cover;object-position:center top;border:1px solid var(--line);display:block">
+      </div>
+    </section>
+
+    <section id="real-estate" data-sect style="padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--line);display:flex;gap:clamp(28px,5vw,80px);flex-wrap:wrap">
+      <div data-r style="flex:1 1 180px;min-width:160px;display:flex;gap:18px;align-items:baseline">
+        <span style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(40px,5vw,64px);line-height:1;color:var(--accent)">01</span>
+        <span style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding-top:6px">Real Estate</span>
+      </div>
+      <div style="flex:3 1 420px;min-width:300px">
+        <h2 data-r style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(30px,4.4vw,52px);line-height:1.05;letter-spacing:-.012em;max-width:15ch">Buying or selling in South Jersey.</h2>
+        <p data-r style="font-size:clamp(16px,1.7vw,19px);line-height:1.6;max-width:56ch;margin-top:24px;color:rgba(21,17,13,.72)">Heather and I are both licensed in New Jersey. You get two agents and one straight answer. We work with the Chris McKenty Team at Opus Elite Real Estate.</p>
+
+        <div data-r style="margin-top:clamp(34px,4vw,52px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:clamp(20px,3vw,40px);border-top:1px solid var(--line);padding-top:clamp(28px,3vw,40px)">
+          <div>
+            <p style="font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)">Cell &amp; Text</p>
+            <a href="tel:8564041098" style="display:block;font-family:'Newsreader',serif;font-weight:300;font-size:clamp(24px,2.8vw,32px);margin-top:8px">856 404 1098</a>
+          </div>
+          <div>
+            <p style="font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)">Office</p>
+            <a href="tel:6095405505" style="display:block;font-family:'Newsreader',serif;font-weight:300;font-size:clamp(24px,2.8vw,32px);margin-top:8px">609 540 5505</a>
+          </div>
+          <div>
+            <p style="font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)">Office</p>
+            <p style="font-size:clamp(15px,1.6vw,17px);line-height:1.5;margin-top:8px">5001 Route 42<br>Turnersville, NJ 08012</p>
+          </div>
+        </div>
+        <p data-r style="font-size:13px;letter-spacing:.04em;margin-top:22px;color:rgba(21,17,13,.6)">Opus Elite Real Estate &nbsp;&middot;&nbsp; The Chris McKenty Team</p>
+      </div>
+    </section>
+
+    <section id="sold" data-sect style="padding:clamp(48px,7vw,96px) 0 clamp(16px,3vw,40px);border-top:1px solid var(--line)">
+      <div data-r style="max-width:64ch">
+        <p style="font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)">Track Record</p>
+        <div style="display:flex;align-items:baseline;gap:clamp(14px,3vw,32px);flex-wrap:wrap;margin-top:clamp(14px,2vw,22px)">
+          <span data-count="69" style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(82px,17vw,210px);line-height:.82;letter-spacing:-.03em;color:var(--accent)">0</span>
+          <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(26px,3.6vw,46px);line-height:1.08;letter-spacing:-.012em;max-width:13ch">homes sold in the last twelve months.</h2>
+        </div>
+        <p style="font-size:clamp(16px,1.7vw,19px);line-height:1.6;max-width:54ch;margin-top:clamp(20px,3vw,30px);color:rgba(21,17,13,.72)">With the Chris McKenty Team at Opus Elite. Ask me how any of them went and you get the honest version.</p>
+      </div>
+
+      <div style="margin-top:clamp(34px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:clamp(20px,3vw,40px);border-top:1px solid var(--line);padding-top:clamp(26px,3vw,38px)">
+        <div data-r><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(26px,3vw,38px);line-height:1">1,342</p><p style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(21,17,13,.55);margin-top:8px">Total sales</p></div>
+        <div data-r><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(26px,3vw,38px);line-height:1">$365K</p><p style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(21,17,13,.55);margin-top:8px">Average price</p></div>
+        <div data-r><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(26px,3vw,38px);line-height:1">$35K to $1.1M</p><p style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(21,17,13,.55);margin-top:8px">Price range</p></div>
+        <div data-r><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(26px,3vw,38px);line-height:1">5.0</p><p style="font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(21,17,13,.55);margin-top:8px">529 team reviews</p></div>
+      </div>
+
+      <div style="margin-top:clamp(40px,5vw,72px)">
+        <div data-r style="display:flex;align-items:baseline;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;margin-bottom:6px">
+          <p style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)">Recent Sales</p>
+          <p style="font-size:11px;letter-spacing:.04em;color:rgba(21,17,13,.5)">Tagged Mine are John's. Office is the team.</p>
+        </div>
+
+        <div data-r style="display:flex;flex-wrap:wrap;align-items:center;gap:6px clamp(16px,3vw,28px);padding:clamp(16px,2.4vw,24px) 0;border-top:1px solid var(--line)">
+          <span style="flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:5px 11px;border-radius:999px;background:var(--accent);color:var(--bg)">Mine</span>
+          <div style="flex:1 1 220px;min-width:200px"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,2.6vw,30px);line-height:1.1">408 Princeton Avenue</p><p style="font-size:13px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">National Park, NJ</p></div>
+          <div style="flex:0 0 auto;margin-left:auto;text-align:right"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(18px,2vw,24px)">$240,000</p><p style="font-size:12px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">3 bd &middot; 1 ba &middot; 960 sqft</p></div>
+        </div>
+
+        <div data-r style="display:flex;flex-wrap:wrap;align-items:center;gap:6px clamp(16px,3vw,28px);padding:clamp(16px,2.4vw,24px) 0;border-top:1px solid var(--line)">
+          <span style="flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:5px 11px;border-radius:999px;background:var(--accent);color:var(--bg)">Mine</span>
+          <div style="flex:1 1 220px;min-width:200px"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,2.6vw,30px);line-height:1.1">323 Evergreen Avenue</p><p style="font-size:13px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">Woodlynne, NJ</p></div>
+          <div style="flex:0 0 auto;margin-left:auto;text-align:right"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(18px,2vw,24px)">$200,000</p><p style="font-size:12px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">3 bd &middot; 1 ba &middot; 1,163 sqft</p></div>
+        </div>
+
+        <div data-r style="display:flex;flex-wrap:wrap;align-items:center;gap:6px clamp(16px,3vw,28px);padding:clamp(16px,2.4vw,24px) 0;border-top:1px solid var(--line)">
+          <span style="flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:rgba(21,17,13,.55)">Office</span>
+          <div style="flex:1 1 220px;min-width:200px"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,2.6vw,30px);line-height:1.1">8 Rothschild Court</p><p style="font-size:13px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">Woodbury, NJ</p></div>
+          <div style="flex:0 0 auto;margin-left:auto;text-align:right"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(18px,2vw,24px)">$625,000</p><p style="font-size:12px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">4 bd &middot; 2 ba &middot; 2,978 sqft</p></div>
+        </div>
+
+        <div data-r style="display:flex;flex-wrap:wrap;align-items:center;gap:6px clamp(16px,3vw,28px);padding:clamp(16px,2.4vw,24px) 0;border-top:1px solid var(--line)">
+          <span style="flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:rgba(21,17,13,.55)">Office</span>
+          <div style="flex:1 1 220px;min-width:200px"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,2.6vw,30px);line-height:1.1">453 Prince Street</p><p style="font-size:13px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">Woodbury, NJ</p></div>
+          <div style="flex:0 0 auto;margin-left:auto;text-align:right"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(18px,2vw,24px)">$360,000</p><p style="font-size:12px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">4 bd &middot; 2 ba &middot; 1,536 sqft</p></div>
+        </div>
+
+        <div data-r style="display:flex;flex-wrap:wrap;align-items:center;gap:6px clamp(16px,3vw,28px);padding:clamp(16px,2.4vw,24px) 0;border-top:1px solid var(--line)">
+          <span style="flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:rgba(21,17,13,.55)">Office</span>
+          <div style="flex:1 1 220px;min-width:200px"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,2.6vw,30px);line-height:1.1">40 Tansboro Road</p><p style="font-size:13px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">Berlin, NJ</p></div>
+          <div style="flex:0 0 auto;margin-left:auto;text-align:right"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(18px,2vw,24px)">$197,000</p><p style="font-size:12px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">2 bd &middot; 1 ba &middot; 1,075 sqft</p></div>
+        </div>
+
+        <div data-r style="display:flex;flex-wrap:wrap;align-items:center;gap:6px clamp(16px,3vw,28px);padding:clamp(16px,2.4vw,24px) 0;border-top:1px solid var(--line)">
+          <span style="flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:rgba(21,17,13,.55)">Office</span>
+          <div style="flex:1 1 220px;min-width:200px"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,2.6vw,30px);line-height:1.1">540 Dogwood Lane</p><p style="font-size:13px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">Williamstown, NJ</p></div>
+          <div style="flex:0 0 auto;margin-left:auto;text-align:right"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(18px,2vw,24px)">$155,000</p><p style="font-size:12px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">2 bd &middot; 2 ba &middot; 1,000 sqft</p></div>
+        </div>
+
+        <div data-r style="display:flex;flex-wrap:wrap;align-items:center;gap:6px clamp(16px,3vw,28px);padding:clamp(16px,2.4vw,24px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+          <span style="flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:rgba(21,17,13,.55)">Office</span>
+          <div style="flex:1 1 220px;min-width:200px"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,2.6vw,30px);line-height:1.1">739 Meadowview Lane</p><p style="font-size:13px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">Cape May, NJ</p></div>
+          <div style="flex:0 0 auto;margin-left:auto;text-align:right"><p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(18px,2vw,24px)">$100,000</p><p style="font-size:12px;letter-spacing:.02em;color:rgba(21,17,13,.55);margin-top:3px">1 bd &middot; 1 ba</p></div>
+        </div>
+
+        <a data-r href="https://www.zillow.com/profile/johnvscafide" target="_blank" rel="noopener" style="display:inline-block;margin-top:clamp(24px,3vw,36px);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-bottom:2px solid var(--accent);padding-bottom:4px;color:var(--accent)">See John's sales on Zillow</a>
+      </div>
+    </section>
+
+    <section data-sect style="padding:clamp(64px,11vw,160px) 0;border-top:1px solid var(--line)">
+      <blockquote data-r style="margin:0">
+        <p style="font-family:'Newsreader',serif;font-style:italic;font-weight:300;font-size:clamp(30px,6.2vw,76px);line-height:1.1;letter-spacing:-.018em;max-width:20ch">I would rather lose the sale than put you in the wrong house.</p>
+        <p style="margin-top:clamp(20px,3vw,34px);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)">John Scafide</p>
+      </blockquote>
+    </section>
+
+    <section id="taxes" data-sect style="padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--line);display:flex;gap:clamp(28px,5vw,80px);flex-wrap:wrap">
+      <div data-r style="flex:1 1 180px;min-width:160px;display:flex;gap:18px;align-items:baseline">
+        <span style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(40px,5vw,64px);line-height:1;color:var(--accent)">02</span>
+        <span style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding-top:6px">Taxes</span>
+      </div>
+      <div style="flex:3 1 420px;min-width:300px;display:flex;gap:clamp(28px,4vw,56px);flex-wrap:wrap;align-items:flex-start">
+        <div style="flex:1 1 300px;min-width:280px">
+          <h2 data-r style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(30px,4.4vw,52px);line-height:1.05;letter-spacing:-.012em;max-width:16ch">Returns, and the relief most people miss.</h2>
+          <p data-r style="font-size:clamp(16px,1.7vw,19px);line-height:1.6;max-width:50ch;margin-top:24px;color:rgba(21,17,13,.72)">Individual and small business returns. Plus the New Jersey programs that quietly put money back. I tell you what you qualify for before you file.</p>
+          <ul data-r style="list-style:none;margin-top:clamp(28px,3vw,40px);display:flex;flex-wrap:wrap;gap:10px 12px">
+            <li style="font-family:'Newsreader',serif;font-size:clamp(17px,2vw,21px);padding:7px 16px;border:1px solid var(--line);border-radius:999px">ANCHOR</li>
+            <li style="font-family:'Newsreader',serif;font-size:clamp(17px,2vw,21px);padding:7px 16px;border:1px solid var(--line);border-radius:999px">Senior Freeze</li>
+            <li style="font-family:'Newsreader',serif;font-size:clamp(17px,2vw,21px);padding:7px 16px;border:1px solid var(--line);border-radius:999px">Stay NJ</li>
+            <li style="font-family:'Newsreader',serif;font-size:clamp(17px,2vw,21px);padding:7px 16px;border:1px solid var(--line);border-radius:999px">PAS-1</li>
+            <li style="font-family:'Newsreader',serif;font-size:clamp(17px,2vw,21px);padding:7px 16px;border:1px solid var(--line);border-radius:999px">Property tax appeals</li>
+          </ul>
+          <p data-r style="font-size:clamp(15px,1.6vw,18px);line-height:1.6;margin-top:clamp(28px,3vw,40px);color:rgba(21,17,13,.72)">I break down New Jersey relief on TikTok. <a href="https://www.tiktok.com/@thetaxwatchdog" target="_blank" rel="noopener" style="font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:2px;color:var(--accent);white-space:nowrap">@thetaxwatchdog</a></p>
+        </div>
+        <div data-r style="flex:1 1 250px;min-width:248px">
+          <div style="border:1px solid var(--line);padding:clamp(20px,3vw,30px)">
+            <p style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)">Worth Knowing</p>
+            <div style="margin-top:clamp(14px,2vw,20px)">
+              <div style="padding:clamp(12px,1.6vw,16px) 0;border-top:1px solid var(--line)">
+                <p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,3.4vw,42px);line-height:1;color:var(--accent)"><span data-count="1500" data-prefix="$" data-comma>$0</span></p>
+                <p style="font-size:12.5px;letter-spacing:.02em;color:rgba(21,17,13,.6);margin-top:6px">Max ANCHOR homeowner benefit</p>
+              </div>
+              <div style="padding:clamp(12px,1.6vw,16px) 0;border-top:1px solid var(--line)">
+                <p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,3.4vw,42px);line-height:1;color:var(--accent)"><span data-count="6500" data-prefix="$" data-comma>$0</span></p>
+                <p style="font-size:12.5px;letter-spacing:.02em;color:rgba(21,17,13,.6);margin-top:6px">Max Stay NJ senior credit</p>
+              </div>
+              <div style="padding:clamp(12px,1.6vw,16px) 0;border-top:1px solid var(--line)">
+                <p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,3.4vw,42px);line-height:1;color:var(--accent)"><span data-count="20" data-prefix="$">$0</span></p>
+                <p style="font-size:12.5px;letter-spacing:.02em;color:rgba(21,17,13,.6);margin-top:6px">PAS-1 filing help, flat fee</p>
+              </div>
+              <div style="padding:clamp(12px,1.6vw,16px) 0 2px;border-top:1px solid var(--line)">
+                <p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,3.4vw,42px);line-height:1;color:var(--accent)">Nov 2</p>
+                <p style="font-size:12.5px;letter-spacing:.02em;color:rgba(21,17,13,.6);margin-top:6px">PAS-1 deadline, 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="relief" data-sect style="padding:clamp(48px,7vw,96px) 0;border-top:1px solid var(--line);display:flex;gap:clamp(28px,5vw,80px);flex-wrap:wrap">
+      <div data-r style="flex:1 1 180px;min-width:160px;display:flex;gap:18px;align-items:baseline">
+        <span style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(40px,5vw,64px);line-height:1;color:var(--accent)">03</span>
+        <span style="font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding-top:6px">A Project</span>
+      </div>
+      <div style="flex:3 1 420px;min-width:300px;display:flex;gap:clamp(28px,4vw,56px);flex-wrap:wrap;align-items:center">
+        <div data-r style="flex:1 1 260px;min-width:240px">
+          <h2 style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(28px,4.2vw,50px);line-height:1.05;letter-spacing:-.012em;word-break:break-word">njpropertytaxrelief.com</h2>
+          <p style="font-size:clamp(16px,1.7vw,19px);line-height:1.6;max-width:48ch;margin-top:24px;color:rgba(21,17,13,.72)">Millions of New Jersey homeowners, renters, and seniors qualify for relief they never claim. I built a site that finds out what you are owed.</p>
+          <a href="https://njpropertytaxrelief.com/" target="_blank" rel="noopener" style="display:inline-block;margin-top:30px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-bottom:2px solid var(--accent);padding-bottom:5px;color:var(--accent)">Visit the site</a>
+        </div>
+        <div data-r style="flex:1 1 340px;min-width:280px;perspective:1400px">
+          <a href="https://njpropertytaxrelief.com/" target="_blank" rel="noopener" style="display:block;border-radius:10px;overflow:hidden;border:1px solid var(--line);box-shadow:0 26px 60px -28px rgba(21,17,13,.45),0 6px 16px -8px rgba(21,17,13,.22);transform:rotateX(7deg) rotateY(-11deg) rotate(.6deg);transform-origin:center;transition:transform .55s cubic-bezier(.2,.7,.2,1),box-shadow .55s ease;will-change:transform" style-hover="transform:rotateX(0deg) rotateY(0deg) rotate(0deg);box-shadow:0 36px 80px -28px rgba(21,17,13,.5),0 8px 20px -10px rgba(21,17,13,.25)">
+            <div style="display:flex;align-items:center;gap:7px;padding:10px 13px;background:#e2e6dd;border-bottom:1px solid var(--line)">
+              <span style="width:9px;height:9px;border-radius:50%;background:rgba(21,17,13,.22)"></span>
+              <span style="width:9px;height:9px;border-radius:50%;background:rgba(21,17,13,.16)"></span>
+              <span style="width:9px;height:9px;border-radius:50%;background:rgba(21,17,13,.10)"></span>
+              <span style="margin-left:10px;flex:1;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:rgba(21,17,13,.5);background:var(--bg);padding:4px 12px;border-radius:999px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">njpropertytaxrelief.com</span>
+            </div>
+            <img src="nj-relief.png" alt="njpropertytaxrelief.com homepage" style="display:block;width:100%;height:auto">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" data-sect style="padding:clamp(56px,8vw,120px) 0 clamp(40px,6vw,80px);border-top:1px solid var(--line)">
+      <h2 data-r style="font-family:'Newsreader',serif;font-weight:300;font-style:italic;font-size:clamp(48px,11vw,128px);line-height:.95;letter-spacing:-.02em">Let's talk.</h2>
+      <div style="margin-top:clamp(32px,4vw,52px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,56px)">
+        <div data-r>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)">Call or Text</p>
+          <a href="tel:8564041098" style="display:block;font-family:'Newsreader',serif;font-weight:300;font-size:clamp(26px,3.4vw,40px);margin-top:8px">856 404 1098</a>
+        </div>
+        <div data-r>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)">Office</p>
+          <a href="tel:6095405505" style="display:block;font-family:'Newsreader',serif;font-weight:300;font-size:clamp(26px,3.4vw,40px);margin-top:8px">609 540 5505</a>
+        </div>
+        <div data-r>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)">Find Me</p>
+          <p style="font-family:'Newsreader',serif;font-weight:300;font-size:clamp(20px,2.4vw,26px);line-height:1.3;margin-top:8px">5001 Route 42<br>Turnersville, NJ 08012</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="border-top:1px solid var(--line)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(32px,4vw,56px) clamp(20px,5vw,56px) clamp(40px,5vw,64px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px);justify-content:space-between">
+      <div style="flex:1 1 280px;min-width:240px">
+        <p style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase">Equal Housing Opportunity</p>
+        <p style="font-size:12.5px;line-height:1.65;margin-top:14px;color:rgba(21,17,13,.58);max-width:70ch">Opus Elite Real Estate is an equal housing opportunity provider. All information provided is deemed reliable but not guaranteed. John Scafide and Heather Scafide are licensed real estate salespersons in the State of New Jersey affiliated with the Chris McKenty Team at Opus Elite Real Estate. License #2079591.</p>
+        <p style="font-size:12.5px;line-height:1.65;margin-top:12px;color:rgba(21,17,13,.58);max-width:70ch">Tax information on this site is general and does not constitute tax, legal, or financial advice for your specific situation. Eligibility for New Jersey relief programs is determined by the State of New Jersey.</p>
+        <p style="font-size:12.5px;line-height:1.65;margin-top:12px;color:rgba(21,17,13,.58);max-width:70ch">Recent sales reflect transactions by The Chris McKenty Team at Opus Elite Real Estate; entries marked Mine were handled by John Scafide. Sales data via Zillow, deemed reliable but not guaranteed.</p>
+      </div>
+      <div style="flex:0 0 auto">
+        <p style="font-family:'Newsreader',serif;font-style:italic;font-size:20px">John Scafide</p>
+        <a href="https://www.tiktok.com/@thetaxwatchdog" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)">TikTok @thetaxwatchdog</a>
+        <p style="font-size:12.5px;margin-top:12px;color:rgba(21,17,13,.58)">© 2026 &middot; Turnersville, New Jersey</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  rootRef = React.createRef();
+
+  componentDidMount() {
+    const root = this.rootRef.current;
+    if (!root) return;
+    this.items = Array.from(root.querySelectorAll('[data-r]'));
+    this.counters = Array.from(root.querySelectorAll('[data-count]'));
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { this.counters.forEach(c => this.setCount(c)); return; }
+
+    root.querySelectorAll('[data-sect]').forEach(sec => {
+      sec.querySelectorAll('[data-r]').forEach((el, i) => { el.dataset.d = Math.min(i * 80, 520); });
+    });
+    this.items.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = 'opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1)';
+      el.style.transitionDelay = (el.dataset.d || 0) + 'ms';
+      el.style.willChange = 'opacity, transform';
+    });
+
+    // Drive reveals from scroll position (resilient: no reliance on IntersectionObserver).
+    this.scheduled = false;
+    this.onScroll = () => {
+      if (this.scheduled) return;
+      this.scheduled = true;
+      requestAnimationFrame(() => this.tick());
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onScroll, { passive: true });
+    this.tick();
+    // Safety net: never leave content hidden if anything stalls.
+    this.fallback = setTimeout(() => {
+      this.items.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+      this.counters.forEach(c => { if (!c.dataset.done) { c.dataset.done = '1'; this.setCount(c); } });
+    }, 2400);
+  }
+
+  componentWillUnmount() {
+    if (this.onScroll) {
+      window.removeEventListener('scroll', this.onScroll);
+      window.removeEventListener('resize', this.onScroll);
+    }
+    clearTimeout(this.fallback);
+  }
+
+  tick() {
+    this.scheduled = false;
+    const vh = window.innerHeight || document.documentElement.clientHeight;
+    (this.items || []).forEach(el => {
+      if (el.dataset.shown) return;
+      const r = el.getBoundingClientRect();
+      if (r.top < vh * 0.92 && r.bottom > 0) {
+        el.dataset.shown = '1';
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+    });
+    (this.counters || []).forEach(c => {
+      if (c.dataset.done) return;
+      const r = c.getBoundingClientRect();
+      if (r.top < vh * 0.85 && r.bottom > 0) {
+        c.dataset.done = '1';
+        this.countUp(c);
+      }
+    });
+  }
+
+  setCount(el) {
+    const comma = el.dataset.comma !== undefined;
+    const n = parseFloat(el.dataset.count) || 0;
+    el.textContent = (el.dataset.prefix || '') + (comma ? n.toLocaleString('en-US') : n);
+  }
+
+  countUp(el) {
+    const target = parseFloat(el.dataset.count) || 0;
+    const prefix = el.dataset.prefix || '';
+    const comma = el.dataset.comma !== undefined;
+    const dur = 1300, t0 = performance.now();
+    const tick = (t) => {
+      const p = Math.min(1, (t - t0) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const n = Math.round(target * eased);
+      el.textContent = prefix + (comma ? n.toLocaleString('en-US') : n);
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  renderVals() {
+    return { rootRef: this.rootRef };
+  }
+}
+</script>
+</body>
+</html>
